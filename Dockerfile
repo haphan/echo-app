@@ -22,6 +22,6 @@ EXPOSE 8080
 WORKDIR /srv
 
 HEALTHCHECK --interval=5s --timeout=1s \
-  CMD curl -f http://127.0.0.1:8080/healthz || exit 1
+  CMD wget --quiet --tries=1 --spider --user-agent healthcheck http://127.0.0.1:8080/ || exit 1
 
 ENTRYPOINT ["/srv/app"]
