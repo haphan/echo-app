@@ -25,5 +25,6 @@ func main() {
 		fmt.Fprint(w, fmt.Sprintf("%s %s %s\n", r.Method, r.URL.RequestURI(), r.Proto))
 	})
 
+	fmt.Println("Server started on port 8080")
 	http.ListenAndServe(":8080", handlers.LoggingHandler(os.Stdout, handler))
 }

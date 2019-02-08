@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: echo
+spec:
+  selector:
+    matchLabels:
+      app: echo
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: echo
+    spec:
+      containers:
+      - name: echo
+        image: haphan/echo-app:latest
+        ports:
+          - containerPort: 8080
