@@ -10,7 +10,7 @@
 ### Build from source
 
 ```bash
-git clone https://bitbucket.org/haphan/echo-app.git && cd echo-app
+git clone https://github.com/haphan/echo-app.git && cd echo-app
 make
 ```
 
@@ -23,7 +23,7 @@ docker run --name echo-app -it -d -p 8080:8080 haphan/echo-app:latest
 ### Test locally using `docker-compose`
 
 ```bash
-git clone https://bitbucket.org/haphan/echo-app.git && cd echo-app
+git clone https://github.com/haphan/echo-app.git && cd echo-app
 docker-compose up -d
 ```
 

@@ -2,7 +2,7 @@ FROM golang:1.11-alpine as builder
 
 ADD https://github.com/golang/dep/releases/download/v0.4.1/dep-linux-amd64 /usr/bin/dep
 
-WORKDIR $GOPATH/src/bitbucket.org/haphan/echo-app
+WORKDIR $GOPATH/src/github.com/haphan/echo-app
 
 COPY Gopkg.toml Gopkg.lock ./
 
